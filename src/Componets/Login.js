@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { Button, Container, Form } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
-import { loginTrue } from './Redux/userSlice';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useRef } from "react";
+import { Button, Container, Form } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { loginTrue } from "./Redux/userSlice";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -17,10 +17,9 @@ const Login = () => {
     const LogPass = userpassRef.current.value;
     dispatch(loginTrue({ name: LogUserName, password: LogPass }));
   };
-
   useEffect(() => {
     if (loginData) {
-      navigate('/home');
+      navigate("/home");
     }
   }, [loginData, navigate]);
 
@@ -72,7 +71,7 @@ const Login = () => {
           <br />
           <br />
 
-          <Button onClick={LoginSubmit} variant="outline-dark" >
+          <Button onClick={LoginSubmit} variant="outline-dark">
             Submit
           </Button>
         </Form>

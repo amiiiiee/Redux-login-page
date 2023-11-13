@@ -15,7 +15,6 @@ const Signup = () => {
     const currentName = nameRef.current.value;
     const currentPass = passRef.current.value;
     dispatch(adduser({ name: currentName, password: currentPass }));
-
     navigate("/login");
   };
 

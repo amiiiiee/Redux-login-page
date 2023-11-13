@@ -21,7 +21,7 @@ const userSlice = createSlice({
       if (findUser) {
         state.login = true;
       } else {
-        alert("incorrect username or password");
+        alert("incorrect username or password...!");
       }
     },
     loginFalse: (state) => {
